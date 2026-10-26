@@ -10,11 +10,11 @@ Using a C-View that queries I-Views fails at linting (test case 8).
 
 Project contains
 
-2 Tables: Person & Age
-1 Class: ZCL_PERSON
-1 ABAP Unit Class: ltcl_person_test
-2 CDS I-Views: ZI_TEST_PERSON & ZI_TEST_AGE
-1 CDS C-View: ZC_PERSON_AGE
+- 2 Tables: Person & Age
+- 1 Class: ZCL_PERSON
+- 1 ABAP Unit Class: ltcl_person_test
+- 2 CDS I-Views: ZI_TEST_PERSON & ZI_TEST_AGE
+- 1 CDS C-View: ZC_PERSON_AGE
 
 ## Test Cases
 
