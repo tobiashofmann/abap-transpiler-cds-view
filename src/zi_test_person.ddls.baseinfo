@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZTEST_PERSON"
+    ]
+  }
+}

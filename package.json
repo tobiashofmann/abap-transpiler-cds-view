@@ -1,0 +1,31 @@
+{
+  "name": "cds-view-abap-transpile",
+  "version": "1.0.0",
+  "description": "CDS Views with ABAP transpiler",
+  "main": "index.js",
+   "private": "true",
+  "author": {
+    "name": "Tobias Hofmann"
+  },
+  "scripts": {
+    "lint": "abaplint",
+    "transpile": "abap_transpile",
+    "test": "node output/index.mjs",
+    "start": "npm run lint && npm run transpile && npm test"
+  },
+  "keywords": [
+    "ABAP",
+    "abaplint",
+    "transpiler",
+    "CDSViews",
+    "ABAP Unit"
+  ],
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "devDependencies": {
+    "@abaplint/cli": "^2.120.86",
+    "@abaplint/database-sqlite": "^2.13.83",
+    "@abaplint/runtime": "^2.14.10",
+    "@abaplint/transpiler-cli": "^2.14.10"
+  }
+}
