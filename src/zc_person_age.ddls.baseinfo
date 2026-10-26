@@ -1,0 +1,8 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZI_TEST_AGE",
+      "ZI_TEST_PERSON"
+    ]
+  }
+}
