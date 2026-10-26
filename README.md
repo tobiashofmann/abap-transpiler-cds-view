@@ -16,23 +16,29 @@ Project contains
 2 CDS I-Views: ZI_TEST_PERSON & ZI_TEST_AGE
 1 CDS C-View: ZC_PERSON_AGE
 
-Test Cases:
+## Test Cases
 
-Working: 
+### Working
+
 1) test_setup_db_person
 2) test_setup_db_age
 3) test_read_db
 4) test_read_icds_person
 5) test_read_icds_age
 
-Partially: Lint OK, Transpile OK, Running: NOK
+### Partially: Lint OK, Transpile OK, Running: NOK
 
 6) test_read_icds_person_nok
 7) test_read_icds_age_nok
 
-Not working: C-View
+### Not working: C-View
 
-8) see branch
+8) see branch c-view: https://github.com/tobiashofmann/abap-transpiler-cds-view/tree/c-view
+
+Linting: OK
+Transpile: NOK
+
+Error: CDS view zc_person_age: unsupported database definition: source zi_test_person does not resolve to a TABL
 
 Problem is that the transpiler fails to handle statement:
 DATA tt_cds_p_result TYPE STANDARD TABLE OF zi_test_person WITH EMPTY KEY.
@@ -68,7 +74,6 @@ Linting & Transpiling:
 ```sh
  npm run test
 ```
-
 
 ## Outputs 
 
@@ -131,4 +136,19 @@ Error: Void type: DDLS:fieldname:ZI_TEST_PERSON
     at zcl_person.read_icds_person_nok (file:///.../output/project/zcl_person.clas.mjs:78:88)
     at #test_read_icds_person_nok (file:///.../output/project/zcl_person.clas.testclasses.mjs:61:30)
     at run (file:///.../output/index.mjs:36:51)
+```
+
+### C-CDS View
+
+```sh
+Building
+Clone: https://github.com/open-abap/open-abap-core
+        726 files added from lib
+Clone: https://github.com/open-abap/open-abap-seo
+        61 files added from lib
+Clone: https://github.com/open-abap/open-abap-cds
+        13 files added from lib
+Error: CDS view zc_person_age: unsupported database definition: source zi_test_person does not resolve to a TABL
+    at CDSDatabaseView.unsupported (...\node_modules\@abaplint\transpiler-cli\build\bundle.js:113714:15)
+    at CDSDatabaseView.source (...\node_modules\@abaplint\transpiler-cli\build\bundle.js:113606:25)
 ```
