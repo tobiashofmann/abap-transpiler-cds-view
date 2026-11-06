@@ -118,6 +118,8 @@ CLASS zcl_person IMPLEMENTATION.
 
         DATA tt_cds_p_result TYPE STANDARD TABLE OF zi_test_person WITH EMPTY KEY.
         SELECT * FROM zi_test_person INTO TABLE @tt_cds_p_result.
+
+        SELECT * FROM zi_test_person INTO TABLE @data(tt_cds_p_result2).
         
     endmethod.
 

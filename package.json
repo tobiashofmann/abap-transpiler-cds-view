@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CDS Views with ABAP transpiler",
   "main": "index.js",
-   "private": "true",
+  "private": "true",
   "author": {
     "name": "Tobias Hofmann"
   },
@@ -23,9 +23,9 @@
   "license": "Apache-2.0",
   "type": "commonjs",
   "devDependencies": {
-    "@abaplint/cli": "^2.120.86",
-    "@abaplint/database-sqlite": "^2.13.83",
-    "@abaplint/runtime": "^2.14.10",
-    "@abaplint/transpiler-cli": "^2.14.10"
+    "@abaplint/cli": "^2.120.94",
+    "@abaplint/database-sqlite": "^2.14.12",
+    "@abaplint/runtime": "^2.14.18",
+    "@abaplint/transpiler-cli": "^2.14.18"
   }
 }
